@@ -6,6 +6,9 @@ import retrofit2.http.GET;
 
 import java.util.List;
 
+/**
+ * Repository ICardRepository.
+ */
 public interface ICardRepository {
 
     @GET(value = "/core/cards2")

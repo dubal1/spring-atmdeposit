@@ -1,12 +1,19 @@
 package com.everis.atmdeposit.app.config;
 
-import com.everis.atmdeposit.app.repository.*;
+import com.everis.atmdeposit.app.repository.IAccountRepository;
+import com.everis.atmdeposit.app.repository.ICardRepository;
+import com.everis.atmdeposit.app.repository.IFingerPrintRepository;
+import com.everis.atmdeposit.app.repository.IPersonRepository;
+import com.everis.atmdeposit.app.repository.IReniecRepository;
 import com.jakewharton.retrofit2.adapter.reactor.ReactorCallAdapterFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+/**
+ * config ClientRetrofitConfig.
+ */
 @Configuration
 public class ClientRetrofitConfig {
     /**

@@ -4,7 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
+/**
+ * Model Account.
+ */
+@ToString
 @Builder
 @Data
 @NoArgsConstructor
@@ -17,5 +22,5 @@ public class Account {
     /**
      * field amount.
      */
-    private Integer amount;
+    private Double amount;
 }

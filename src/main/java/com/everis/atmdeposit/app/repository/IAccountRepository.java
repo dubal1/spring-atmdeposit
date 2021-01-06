@@ -5,6 +5,9 @@ import reactor.core.publisher.Mono;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
+/**
+ * Repository IAccountRepository.
+ */
 public interface IAccountRepository {
 
     @GET(value = "/core/accounts")

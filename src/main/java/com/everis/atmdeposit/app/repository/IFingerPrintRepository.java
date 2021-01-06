@@ -6,6 +6,9 @@ import reactor.core.publisher.Mono;
 import retrofit2.http.Body;
 import retrofit2.http.POST;
 
+/**
+ * Repository IFingerPrintRepository.
+ */
 public interface IFingerPrintRepository {
 
     @POST(value = "/core/fingerprints/validate")

@@ -7,6 +7,9 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/**
+ * Model AtmDeposit.
+ */
 @Builder
 @Data
 @NoArgsConstructor
@@ -15,5 +18,5 @@ public class AtmDeposit {
 
     private String fingerprintEntityName;
     private List<Account> validAccounts;
-    private Integer customerAmount;
+    private Double customerAmount;
 }

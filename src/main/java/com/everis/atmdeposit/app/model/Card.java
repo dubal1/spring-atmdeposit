@@ -5,6 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Model Card.
+ */
 @Builder
 @Data
 @NoArgsConstructor

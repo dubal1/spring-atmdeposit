@@ -9,6 +9,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import static springfox.documentation.builders.PathSelectors.regex;
 
+/**
+ * Swagger SwaggerConfiguration.
+ */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfiguration {
@@ -19,8 +22,8 @@ public class SwaggerConfiguration {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.everis.account.app.controller"))
-                .paths(regex("/core.*"))
+                .apis(RequestHandlerSelectors.basePackage("com.everis.atmdeposit.app.controller"))
+                .paths(regex("/atm.*"))
                 .build();
     }
 }

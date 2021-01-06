@@ -7,11 +7,20 @@ import com.everis.atmdeposit.app.model.Person;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.List;
+
+/**
+ * Service IATMDepositService.
+ */
 public interface IATMDepositService {
 
     Mono<Dummy> saveFingerPrint(Person document);
+
     Mono<Dummy> saveReniec(Person document);
+
     Mono<Person> savePerson(Person person);
+
     Flux<Card> getAllCards();
-    Mono<Account> getAccounts(String cardNumber);
+
+    Mono<List<Account>> getAccounts(List<Card> cards);
 }
