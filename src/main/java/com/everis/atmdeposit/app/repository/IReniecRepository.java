@@ -9,5 +9,5 @@ import retrofit2.http.POST;
 public interface IReniecRepository {
 
     @POST(value = "/external/reniec/validate")
-    Mono<Dummy> savePerson(@Body Person person);
+    Mono<Dummy> saveReniec(@Body Person person);
 }

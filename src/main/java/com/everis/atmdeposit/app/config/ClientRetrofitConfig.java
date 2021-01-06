@@ -1,8 +1,6 @@
 package com.everis.atmdeposit.app.config;
 
-import com.everis.atmdeposit.app.repository.IFingerPrintRepository;
-import com.everis.atmdeposit.app.repository.IPersonRepository;
-import com.everis.atmdeposit.app.repository.IReniecRepository;
+import com.everis.atmdeposit.app.repository.*;
 import com.jakewharton.retrofit2.adapter.reactor.ReactorCallAdapterFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +10,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 @Configuration
 public class ClientRetrofitConfig {
     /**
-     *
      * @return repository.
      */
     @Bean
@@ -43,5 +40,25 @@ public class ClientRetrofitConfig {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         return retrofit.create(IPersonRepository.class);
+    }
+
+    @Bean
+    ICardRepository cardRepository() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://localhost:9003")
+                .addCallAdapterFactory(ReactorCallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        return retrofit.create(ICardRepository.class);
+    }
+
+    @Bean
+    IAccountRepository accountRepository() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://localhost:9004")
+                .addCallAdapterFactory(ReactorCallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        return retrofit.create(IAccountRepository.class);
     }
 }

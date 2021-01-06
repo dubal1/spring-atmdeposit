@@ -9,6 +9,6 @@ import retrofit2.http.POST;
 public interface IFingerPrintRepository {
 
     @POST(value = "/core/fingerprints/validate")
-    Mono<Dummy> savePerson(@Body Person person);
+    Mono<Dummy> saveFingerPerson(@Body Person person);
 
 }

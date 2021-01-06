@@ -8,5 +8,5 @@ import retrofit2.http.POST;
 public interface IPersonRepository {
 
     @POST(value = "/core/persons")
-    public Mono<Person> saveProduct(@Body final Person person);
+    Mono<Person> savePerson(@Body Person person);
 }
